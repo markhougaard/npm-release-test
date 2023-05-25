@@ -1,11 +1,11 @@
 {
   "name": "comp",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release.major": "NEW_VERSION=$(npm version major) && git add . && git commit -m 'Bump version' && git tag $NEW_VERSION"
+    "release": "sh release.sh"
   },
   "keywords": [],
   "author": "",
