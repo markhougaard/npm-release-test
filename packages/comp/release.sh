@@ -10,7 +10,7 @@ fi
 npm version $1
 git add .
 NPM_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
-git commit -m 'Bump version $NPM_VERSION'
+git commit -m 'Bump version'
 git tag comp-v$NPM_VERSION
 echo "Bumped version to v$NPM_VERSION"
 git push && git push --tags
