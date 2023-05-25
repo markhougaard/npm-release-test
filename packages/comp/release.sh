@@ -7,7 +7,7 @@ then
     exit 1
 fi
 
-NEW_VERSION=$(npm version $1)
+$NEW_VERSION=$(npm version $1)
 
 git add .
 git commit -m 'Bump version'
