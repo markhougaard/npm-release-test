@@ -11,7 +11,6 @@ NEW_VERSION=$(npm version $1 -f)
 
 git add .
 git commit -m 'Bump version'
-git tag $NEW_VERSION
 git describe --tags --abbrev=0
 echo "Bumped version to $NEW_VERSION"
 git push && git push --tags
