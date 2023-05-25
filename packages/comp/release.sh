@@ -11,5 +11,8 @@ NEW_VERSION=$(npm version $1)
 
 git add .
 git commit -m 'Bump version'
-echo "Bumped version to $NEW_VERSION"
+
+LIB_VERSION=$(npm pkg get version --workspaces=false | tr -d \")
+
+echo "Bumped version to $LIB_VERSION"
 git push && git push --tags
